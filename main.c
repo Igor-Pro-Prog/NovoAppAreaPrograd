@@ -7,7 +7,7 @@
 
 #define QTD_COORDENADAS 3
 
-float distancia(float x1, float y1, float x2, float y2) {
+int distancia(float x1, float y1, float x2, float y2) {
     return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 }
 
@@ -28,7 +28,7 @@ int main() {
         printf("COORD %d: %.2f %.2f\n", i + 1, coordenadas[0][i], coordenadas[1][i]);
     }
 
-    float distancias[QTD_COORDENADAS], perimetro = 0;
+    int distancias[QTD_COORDENADAS], perimetro = 0;
 
     for (int i = 0; i < QTD_COORDENADAS; i++) {
         int proxI = (i + 1) % QTD_COORDENADAS;
